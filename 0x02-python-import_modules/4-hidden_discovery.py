@@ -4,4 +4,4 @@ if __name__ == '__main__':
     words = dir(hidden_4)
     for i in words:
         if i[:2] != "__":
-            print("{}".format(i))
+            print("{}".format(i), end='\n')
