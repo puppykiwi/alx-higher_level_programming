@@ -1,6 +1,11 @@
 #!/usr/bin/python3
-for i in range(97, 123):
-    if i != 101 and i != 113:
-        print("{}".format(chr(i)), end="")
-    else:
-        i = i + 1
+
+
+def print_low_alpha_ex():
+    for n in range(97, 123):
+        if n != 101 and n != 113:
+            print('{}'.format(chr(n)), end='')
+
+
+if __name__ == '__main__':
+    print_low_alpha_ex()
