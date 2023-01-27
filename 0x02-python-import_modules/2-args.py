@@ -8,7 +8,7 @@ if __name__ == '__main__':
     elif num == 2:
         print("1 argument:", end='\n')
     elif num > 2:
-        print("{} arguments:".format(num), end='\n')
+        print("{} arguments:".format(num - 1), end='\n')
 
     for i in range(1, num):
         print("{:d}:".format(i), sys.argv[i])
