@@ -6,7 +6,10 @@ def safe_print_list(my_list=[], x=0):
             print("{}".format(my_list[i]),end='')
             count=+1
         except (ValueError, TypeError):
-            print("The program ran into a fatal crash")
+            pass
+        except (IndexError):
+            break
+        
     print('\n')
     return count
 #safe_print_list(my_list=[1,2,3,4], x=3)
