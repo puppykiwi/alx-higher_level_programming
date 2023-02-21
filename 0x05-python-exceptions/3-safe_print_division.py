@@ -8,4 +8,4 @@ def safe_print_division(a, b):
     finally:
         print("{:d} / {:d} = {:d}".format(a,b,int(a/b)))
 
-safe_print_division(8, 0)
+# safe_print_division(8, 0)
