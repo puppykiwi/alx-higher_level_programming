@@ -1,28 +1,52 @@
 #!/usr/bin/python3
 
+def safe_division(a, b):
+    quotient = 0
+    try:
+        quotient = a / b
+    except ZeroDivisionError:
+        print("division by 0")
+    except TypeError:
+        print("wrong type")
+    finally:
+        return quotient
+
+
 def list_division(my_list_1, my_list_2, list_length):
-    newlist=[]
-    div=0
+    result_li = []
     for i in range(list_length):
         try:
-            newlist.append(my_list_1[i] / my_list_2[i])
-        except TypeError:
-            print("wrong type")
-            newlist.append(0)
-            continue
+            result_li.append(safe_division(my_list_1[i], my_list_2[i]))
         except IndexError:
-            print("division out of range")
-            newlist.append(0)
-            continue
-        except ZeroDivisionError:
-            print("division by 0")
-            newlist.append(0)
-            continue
-        finally:
-            # newlist.append(div)
-            pass
-        
-    return newlist
+            print("out of range")
+            result_li.append(0)
+
+    return result_li
+    
+# def list_division(my_list_1, my_list_2, list_length):
+#     newlist=[]
+#     div=0
+#     for i in range(list_length):
+#         try:
+#             newlist.append(my_list_1[i] / my_list_2[i])
+#         except TypeError:
+#             print("wrong type")
+#             newlist.append(0)
+#             continue
+#         except IndexError:
+#             print("division out of range")
+#             newlist.append(0)
+#             continue
+#         except ZeroDivisionError:
+#             print("division by 0")
+#             newlist.append(0)
+#             continue
+#         finally:
+#             # newlist.append(div)
+#             pass
+#         
+#     return newlist
+
 
 if __name__ == '__main__':
 
