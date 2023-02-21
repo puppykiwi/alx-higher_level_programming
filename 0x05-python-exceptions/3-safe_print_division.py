@@ -5,8 +5,8 @@ def safe_print_division(a, b):
     try:
         return (div)
     except (ZeroDivisionError):
-        return (None)
+        return None
     finally:
-        print("Inside result: {:d}".format(div))
+        print("Inside result: {}".format(div))
 
 # safe_print_division(8, 0)
