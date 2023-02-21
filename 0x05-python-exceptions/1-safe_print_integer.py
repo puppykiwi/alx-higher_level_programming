@@ -3,11 +3,12 @@
 def safe_print_integer(value):
     try:
         print("{:d}".format(value), end='\n')
-    except (NameError, ValueError):
-        # print("Error")
-        return False
-    else:
         return True
+    except (ValueError):
+        return False
+    except (NameError):
+        return False
+        
 
 # safe_print_integer("frrg")
 if __name__ == '__main__':
