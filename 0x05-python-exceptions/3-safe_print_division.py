@@ -3,9 +3,9 @@
 def safe_print_division(a, b):
     try:
         return (a / b)
-    except (NameError, ValueError):
-        return ()
+    except (NameError, ValueError,ZeroDivisionError):
+        return ("None")
     finally:
-        print("{:d}".format(int(a/b)))
+        print("{:d} / {:d} = {:d}".format(a,b,int(a/b)))
 
-# safe_print_division(8, 4)
+safe_print_division(8, 0)
