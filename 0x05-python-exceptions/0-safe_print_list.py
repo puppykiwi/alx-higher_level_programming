@@ -1,7 +1,12 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    try:
-        [print(x,end=('')) for  x in my_list]
-        print('\n')
-    except:
-        print("The program ran into a fatal crash")
+    count = 0
+    for i in range(x):
+        try:
+            print("{}".format(my_list[i]),end='')
+            count=+1
+        except (ValueError, TypeError):
+            print("The program ran into a fatal crash")
+    print('\n')
+    return count
+#safe_print_list(my_list=[1,2,3,4], x=3)
