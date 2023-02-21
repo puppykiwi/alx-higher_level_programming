@@ -22,7 +22,7 @@ def list_division(my_list_1, my_list_2, list_length):
             result_li.append(0)
 
     return result_li
-    
+
 # def list_division(my_list_1, my_list_2, list_length):
 #     newlist=[]
 #     div=0
@@ -44,7 +44,7 @@ def list_division(my_list_1, my_list_2, list_length):
 #         finally:
 #             # newlist.append(div)
 #             pass
-#         
+#      
 #     return newlist
 
 
@@ -61,4 +61,3 @@ if __name__ == '__main__':
     my_l_2 = [2, 0, "H", 2, 7]
     result = list_division(my_l_1, my_l_2, max(len(my_l_1), len(my_l_2)))
     print(result)
-
