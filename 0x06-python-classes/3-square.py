@@ -14,7 +14,7 @@ class Square:
 
     def area(self):
         '''this function returns the area'''
-        return self.__size*self.__size
+        return (self.__size * self.__size)
 
 
 if __name__ == "__main__":
