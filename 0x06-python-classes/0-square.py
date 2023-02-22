@@ -3,4 +3,4 @@ class square:
     '''
     Creates an empty attr square
     '''
-    square = None
+    pass
