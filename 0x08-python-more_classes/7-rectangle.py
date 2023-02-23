@@ -5,7 +5,7 @@
 class Rectangle:
     '''creates a rectangle class'''
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         if type(width) is not int:
@@ -45,6 +45,7 @@ class Rectangle:
             raise ValueError("value must be >= 0")
         self.__height = value
 
+
     def area(self):
         return self.__width * self.__height
 
@@ -60,7 +61,7 @@ class Rectangle:
             return (str1)
         for i in range(0, self.__height):
             for j in range(self.__width):
-                str1 += "#"
+                str1 += str(self.print_symbol)
             if i is not (self.__height - 1):
                 str1 += '\n'
         return (str1)
@@ -96,5 +97,6 @@ if __name__ == "__main__":
 
     my_rectangle_3.print_symbol = ["C", "is", "fun!"]
     print(my_rectangle_3)
+    print(my_rectangle_3.print_symbol)
 
     print("--")
