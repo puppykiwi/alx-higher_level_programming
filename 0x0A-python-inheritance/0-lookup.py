@@ -3,9 +3,7 @@
 
 def lookup(obj):
     '''returns a list of attributes'''
-    list=[]
-    list.append(obj.__dict__)
-    return list
+    return dir(obj)
 
 
 if __name__ == "__main__":
