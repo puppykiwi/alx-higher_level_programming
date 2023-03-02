@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''creates a class'''
 
+
 def lookup(obj):
     '''returns a list of attributes'''
     return dir(obj)
@@ -11,7 +12,9 @@ if __name__ == "__main__":
         pass
 
     class MyClass2(object):
+        '''seconde class'''
         my_attr1 = 3
+
         def my_meth(self):
             pass
 
