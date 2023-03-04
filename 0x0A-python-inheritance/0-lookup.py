@@ -16,6 +16,7 @@ if __name__ == "__main__":
         my_attr1 = 3
 
         def my_meth(self):
+            '''just a function definitiion'''
             pass
 
     print(lookup(MyClass1))
