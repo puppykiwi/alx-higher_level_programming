@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 '''creates a square class'''
-Rectangle = __import__('9-rectangle').Rectangle
 
 
-class Square(Rectangle):
+class Square(__import__('9-rectangle').Rectangle):
     def __init__(self, size):
         super().integer_validator("size", size)
         super().__init__(size, size)
@@ -18,4 +17,3 @@ if __name__ == '__main__':
 
     print(s)
     print(s.area())
-    print(issubclass(Square, Rectangle))
