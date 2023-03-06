@@ -3,6 +3,7 @@
 
 
 def is_same_class(obj, a_class):
+    '''forgot the docs'''
     return isinstance(obj, a_class)
 
 
