@@ -5,6 +5,7 @@
 class BaseGeometry:
     '''instantiates the class'''
     def __init__(self, width, height):
+        '''initializes these private attr'''
         if type(width) != int:
             raise TypeError("{} must be an integer".format(width))
         if width <= 0:
