@@ -17,7 +17,6 @@ class MyList(list):
                     done = False
         print(arr)
 
-
 if __name__ == '__main__':
     my_list = MyList()
     my_list.append(1)
