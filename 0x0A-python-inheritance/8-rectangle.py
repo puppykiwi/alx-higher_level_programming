@@ -2,7 +2,7 @@
 '''creates a class'''
 
 
-class BaseGeometry:
+class Rectangle(__import__('7-base_geometry').BaseGeometry):
     '''instantiates the class'''
     def __init__(self, width, height):
         '''initializes these private attr'''
