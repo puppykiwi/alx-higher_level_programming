@@ -10,12 +10,10 @@ class BaseGeometry:
 
     def integer_validator(self, name, value):
         '''validates input'''
-        if type(value) is int:
-            if int(value) <= 0:
-                raise ValueError(name+" must be greater than 0")
-        else:
-            raise TypeError(name+" must be an integer")
-
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(name))
+        if value <= 0:
+            raise ValueError("{} must be greater than 0".format(name))
 
 if __name__ == "__main__":
     bg = BaseGeometry()
