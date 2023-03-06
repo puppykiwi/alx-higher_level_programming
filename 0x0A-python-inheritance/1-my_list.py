@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+'''forgot the docs'''
 
 
 class MyList(list):
@@ -16,6 +17,7 @@ class MyList(list):
                     arr[i], arr[i+1] = arr[i+1], arr[i]
                     done = False
         print(arr)
+
 
 if __name__ == '__main__':
     my_list = MyList()
