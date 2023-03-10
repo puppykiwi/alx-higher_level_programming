@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import json
 import sys
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 '''loading lists of args'''
 
 def additem():
@@ -11,7 +12,6 @@ def additem():
         for i in range(1, len(sys.argv)):
             list.append(sys.argv[i])
 
-    with open("add_item.json", 'w+') as f:
-        json.dump(list, f)
+    save_to_json_file(list, 'add_item.json')
 
 additem()
