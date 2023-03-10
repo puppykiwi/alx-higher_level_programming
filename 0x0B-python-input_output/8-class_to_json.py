@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''creates a dict'''
+'''creates a dict from '''
 import json
 
 
