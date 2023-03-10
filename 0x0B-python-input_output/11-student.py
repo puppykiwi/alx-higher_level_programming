@@ -30,10 +30,13 @@ class Student:
             return mdict
 
     def reload_from_json(self, json):
-        '''loads from a json dict with alot of docs'''
-        self.__dict__.clear()
-        for i in json:
-            self.__dict__[i] = json[i]
+        """Updates attributes through JSON file
+        Args:
+            json (dict): dictionary of JSON file
+        """
+        for k, v in json.items():
+            if hasattr(self, k):
+                setattr(self, k, v)
 
 
 if __name__ == "__main__":
