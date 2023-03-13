@@ -1,6 +1,6 @@
-let stringarr = ["C is fun", "Python is cool", "JavaScript is amazing"];
+#!/usr/bin/node
+const stringarr = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
 
-for (let i =0; i != 3; i++)
-{
-    console.log(stringarr[i]);
+for (let i = 0; i !== 3; i++) {
+  console.log(stringarr[i]);
 }
