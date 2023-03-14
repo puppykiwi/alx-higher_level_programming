@@ -13,3 +13,5 @@ class Square extends cp {
     }
   }
 }
+
+module.exports = Square;
