@@ -14,44 +14,43 @@ class Rectangle(Base):
         self.__y = y
 
     @property
-    '''This is an attr height getter'''
     def height(self):
+        '''This is an attr height getter'''
         return self.__height
 
     @property
-    '''This is an attr width getter'''
     def width(self):
+        '''This is an attr width getter'''
         return self.__width
 
     @property
-    '''This is an attr y getter'''
     def x(self):
+        '''This is an attr y getter'''
         return self.__x
 
     @property
-    '''This is an attr x getter'''
     def y(self):
+        '''This is an attr x getter'''
         return self.__y
 
     @height.setter
-    '''THis is a height setter'''
     def height(self, val):
+        '''THis is a height setter'''
         self.__height = val
 
     @width.setter
-    '''THis is a width setter'''
     def width(self, val):
+        '''THis is a width setter'''
         self.__width = val
-        '''This is an attr setter'''
 
     @x.setter
-    '''THis is a x setter'''
     def x(self, val):
+        '''THis is a x setter'''
         self.__x = val
 
     @y.setter
-    '''THis is a  y setter'''
     def y(self, val):
+        '''THis is a y setter'''
         self.__y = val
 
 
