@@ -5,10 +5,10 @@ const string = 'C is fun';
 
 if (isNaN(num)) {
   console.log('Missing number of occurrences');
-} else {
-  i = 0;
-  while (i !== num) {
-    console.log(string);
-    i++;
-  }
+}
+
+let i = 0;
+while (i !== num) {
+  console.log(string);
+  i++;
 }

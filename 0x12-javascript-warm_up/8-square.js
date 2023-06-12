@@ -4,7 +4,7 @@ const num = parseInt(argv[2]);
 if (isNaN(num)) {
   console.log('Missing size');
 }
-
+let i, j;
 for (i = 0; i < num; i++) {
   let row = '';
   for (j = 0; j < num; j++) {
