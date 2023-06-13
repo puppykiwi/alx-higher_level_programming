@@ -11,7 +11,7 @@ class Rectangle {
     console.log(this);
     for (let i = 0; i < this.height; i++) {
       let str = '';
-      for (let j = 0; i < this.width; j++) {
+      for (let j = 0; j < this.width; j++) {
         str += 'x';
       }
       console.log(str);
@@ -20,7 +20,3 @@ class Rectangle {
 }
 
 module.exports = Rectangle;
-
-const r1 = new Rectangle(2, 3);
-console.log(r1);
-r1.print();
