@@ -1,17 +1,28 @@
 #!/usr/bin/python3
-""" Module that contains a script that lists
-    all states from the database hbtn_0e_0_usa """
-import MySQLdb
-import sys
+"""Script displays states in database by ascending id order that start with 'N'
+   Script should take 3 arguments:
+   mysql username, mysql password and database name
+"""
 
-if __name__ == "__main__":
-    """ Retrieve all states from database """
-    db = MySQLdb.connect(host="localhost", user=sys.argv[1],
-                         passwd=sys.argv[2], db=sys.argv[3], port=3306)
-    cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
-    states = cursor.fetchall()
-    for state in states:
-        print(state)
-    cursor.close()
-    db.close()
+if __name__ == '__main__':
+    import sys
+    import MySQLdb
+
+    if len(sys.argv) > 3:
+        conn = MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=sys.argv[1],
+            passwd=sys.argv[2],
+            db=sys.argv[3],
+            charset="utf8"
+        )
+        cur = conn.cursor()
+        cur.execute("""SELECT * FROM states WHERE name LIKE 'N%'
+                    ORDER BY states.id ASC""")
+        query_rows = cur.fetchall()
+        for row in query_rows:
+            if row[1][0] == "N":
+                print(row)
+        cur.close()
+        conn.close()
