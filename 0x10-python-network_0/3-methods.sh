@@ -1,3 +1,3 @@
 #!/bin/bash
-# send a delete request
-curl -s -X DELETE "$1"
+# gets the allowed methods
+curl -sI "$1" | grep "Allow" | cut -d' ' -f2
