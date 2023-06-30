@@ -4,7 +4,9 @@ from requests import get
 from sys import argv
 
 if __name__ == "__main__":
-    url = 'https://api.github.com/repos/{}/{}/commits'.format(argv[2], argv[1])
+    repository_name = argv[1]
+    owner_name = argv[2]
+    url = 'https://api.github.com/repos/{}/{}/commits'.format(repository_name, owner_name)
     with get(url) as response:
         for commit in response.json()[:10]:
             print('{}: {}'.format(commit.get('sha'),commit.get('commit').get('author').get('name')))
