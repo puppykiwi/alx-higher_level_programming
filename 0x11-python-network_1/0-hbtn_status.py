@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""Fetches https://intranet.hbtn.io/status"""
+"""Fetches https://alx-intranet.hbtn.io/status"""
 from urllib.request import urlopen as uopen
-with uopen('https://intranet.hbtn.io/status') as response:
+with uopen('https://alx-intranet.hbtn.io/status') as response:
     html = response.read()
 
 if __name__ == "__main__":
