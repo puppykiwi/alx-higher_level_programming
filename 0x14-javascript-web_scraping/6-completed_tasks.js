@@ -3,22 +3,18 @@
 
 const request = require('request');
 const url = process.argv[2];
-const dict = {};
 
-request(url, function (err, response, body) {
-  if (err) {
-    return console.log(err);
-  }
-  const results = JSON.parse(body);
-  for (const task of results) {
-    if (task.completed === true) {
-      if (task.userId in dict) {
-        dict[task.userId]++;
-      } else {
-        dict[task.userId] = 1;
+request(process.argv[2], function (error, response, body) {
+  if (!error) {
+    const todos = JSON.parse(body);
+    const completed = {};
+    todos.forEach((todo) => {
+      if (todo.completed && completed[todo.userId] === undefined) {
+        completed[todo.userId] = 1;
+      } else if (todo.completed) {
+        completed[todo.userId] += 1;
       }
-    }
+    });
+    console.log(completed);
   }
-  console.log(dict);
-}
-);
+});
