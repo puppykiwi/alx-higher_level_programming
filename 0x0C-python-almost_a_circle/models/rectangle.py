@@ -65,9 +65,6 @@ class Rectangle(Base):
     def y(self, val):
         '''THis is a y setter'''
         self.__y = val
-    
-    def area(self):
-        return (self.__height * self.__width)
 
 
 if __name__ == "__main__":
